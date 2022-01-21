@@ -1,10 +1,9 @@
 --[[
-# Minimalis Conky 1.3
-# Author : archit3x
-# Release date : 4 December 2020
-# Tested on : Archlinux ARM - XFCE Desktop
-# Email : archit3x@archlinux.us
-# Feel free to modity this script ;)
+# Inspirações:
+# https://www.pling.com/p/1198875
+# https://www.pling.com/p/1112273
+# https://www.pling.com/p/1578329
+# https://github.com/ZvonimirKucis/conky
 ]]
 
 conky.config = {
@@ -25,7 +24,7 @@ conky.config = {
     stippled_borders = 0,
     update_interval = 1.0,
     uppercase = false,
-    use_spacer = 'right',
+    use_spacer = 'none',
     
     --Placement
     alignment = 'top_right', 
@@ -121,8 +120,8 @@ ${goto 40}${color2}${diskiograph_read /dev/sda 40,130} ${alignr}${diskiograph_wr
 # NETWORK
 #------------+
 ${color}${font ConkySymbols:size=20}b${font} ${voffset -10} Wireless» $hr${color}
-${color1}${goto 40}SSID          : ${color}${wireless_essid wlp1s0} ${color1}${alignr}Signal: ${color}${wireless_link_qual_perc wlp1s0}% ${wireless_link_bar 4,100 wlp1s0}
-${color1}${goto 40}Bitrate       : ${color}${wireless_bitrate wlp1s0}
-${color1}${goto 40}Total Down/Up : ${color}${totaldown wlp1s0}/${totalup wlp1s0} 
-${color1}${goto 40}Speed Down/Up : ${color}${downspeed wlp1s0}/${upspeed wlp1s0}
+${color1}${goto 40}SSID: ${color}${wireless_essid wlp1s0}${color1}${alignr}Signal: ${color}${wireless_link_qual_perc wlp1s0}%${wireless_link_bar 4,100 wlp1s0}
+${color1}${goto 40}Bitrate: ${color}${wireless_bitrate wlp1s0}
+${color1}${goto 40}Total Down/Up: ${color}${totaldown wlp1s0}/${totalup wlp1s0} 
+${color1}${goto 40}Speed Down/Up: ${color}${downspeed wlp1s0}/${upspeed wlp1s0}
 ]]
