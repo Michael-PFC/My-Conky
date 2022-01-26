@@ -29,7 +29,7 @@ conky.config = {
     --Placement
     alignment = 'top_right', 
     gap_x = 10,
-    gap_y = 60,
+    gap_y = 30,
     minimum_height = 1300,
     minimum_width = 320,
     
